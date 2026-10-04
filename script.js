@@ -14,7 +14,18 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-	const humanChoice = prompt("Write your choice(rock, paper or scissors):");
+	let humanChoice = prompt("Write your choice(rock, paper or scissors):");
+
+	let keepGoing = true;
+	while(keepGoing) {
+		humanChoice = humanChoice.toLowerCase();
+
+		if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
+			keepGoing = false;
+		} else {
+			humanChoice = prompt("Wrong choice write rock, paper or scissors:");
+		}
+	}
 
 	return humanChoice;
 }
