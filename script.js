@@ -82,11 +82,10 @@ function playGame() {
 
 	}
 
-	for (let i = 1; i <= 5; i++) {
-		console.log(`Round ${i}.`);
+	let round = 1;
 
-		playRound(getHumanChoice(), getComputerChoice());
-	}
+	console.log(`Round ${round++}.`);
+	playRound(getHumanChoice(), getComputerChoice());
 
 	if (humanScore > computerScore) {
 		console.log("Congratulations you win!");
